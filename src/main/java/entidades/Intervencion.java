@@ -13,8 +13,8 @@ public class Intervencion extends Cita {
 	// Lo mismo que Revision
 	private int duracionMinutos;
 
-	public Intervencion(long id, LocalDateTime fechaHora, int duracionMinutos) {
-		super(id, fechaHora);
+	public Intervencion(long id, LocalDateTime fechaHora, int duracionMinutos, String anotacion) {
+		super(id, fechaHora, anotacion);
 		this.duracionMinutos = duracionMinutos;
 	}
 

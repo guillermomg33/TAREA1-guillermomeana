@@ -15,22 +15,23 @@ public abstract class Cita {
 	// Revisiones e intervenciones
 	private Long id;
 	private LocalDateTime fechaHora;
+	private String anotacion;
 	
 	// Formato para LocalDateTime
 	public static final DateTimeFormatter FORMATO_FECHA_HORA =
             DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
-	public Cita(long id, LocalDateTime fechaHora) {
-		super();
+	public Cita(long id, LocalDateTime fechaHora, String anotacion) {
 		this.id = id;
 		this.fechaHora = fechaHora;
+		this.anotacion = anotacion;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -42,7 +43,11 @@ public abstract class Cita {
 		this.fechaHora = fechaHora;
 	}
 
-	public static DateTimeFormatter getFormatoFechaHora() {
-		return FORMATO_FECHA_HORA;
+	public String getAnotacion() {
+		return anotacion;
+	}
+
+	public void setAnotacion(String anotacion) {
+		this.anotacion = anotacion;
 	}
 }

@@ -11,20 +11,9 @@ import java.time.LocalDateTime;
 
 public class Revision extends Cita {
 	// Extiende de Cita por lo que implementa id y fechaHora
-	private String anotaciones;
+	// No tiene atributos únicos, solo está para diferenciarlo de Intervencion
 
-	public Revision(long id, LocalDateTime fechaHora, String anotaciones) {
-		super(id, fechaHora);
-		this.anotaciones = anotaciones;
+	public Revision(long id, LocalDateTime fechaHora, String anotacion) {
+		super(id, fechaHora, anotacion);
 	}
-
-	public String getAnotaciones() {
-		return anotaciones;
-	}
-
-	public void setAnotaciones(String anotaciones) {
-		this.anotaciones = anotaciones;
-	}
-	
-	
 }
