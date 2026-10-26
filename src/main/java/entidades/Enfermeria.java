@@ -13,14 +13,15 @@ import enums.Categoria;
 
 public class Enfermeria extends Empleado {
 	private Categoria categoria;
-	
-	// Cada enfermero tiene un informe propio de Tratamientos
-	private Set listaTratamientos;
 
-	public Enfermeria(Categoria categoria, Set listaTratamientos) {
+	public Enfermeria(Long id, String nombre, String apellidos, String telefono, String email, String nifNie, String direccion, Categoria categoria) {
+		super(id, nombre, apellidos, telefono, email, nifNie, direccion);
+		this.categoria = categoria;
+	}
+
+	public Enfermeria(Categoria categoria) {
 		super();
 		this.categoria = categoria;
-		this.listaTratamientos = listaTratamientos;
 	}
 
 	public Categoria getCategoria() {
@@ -29,13 +30,5 @@ public class Enfermeria extends Empleado {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
-	}
-
-	public Set getListaTratamientos() {
-		return listaTratamientos;
-	}
-
-	public void setListaTratamientos(Set listaTratamientos) {
-		this.listaTratamientos = listaTratamientos;
 	}
 }

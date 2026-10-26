@@ -7,7 +7,9 @@
 
 package entidades;
 
-public class Alergia {
+import java.io.Serializable;
+
+public class Alergia implements Serializable {
 	private Long id;
 	private String nombre;
 	
@@ -47,5 +49,17 @@ public class Alergia {
 
 	public void setMedicamento(Medicamento medicamento) {
 		this.medicamento = medicamento;
+	}
+
+	@Override
+	public String toString() {
+		return "Alergia" + "\n" +
+				"ID: " + id + "\n" +
+				"Nombre: " + nombre + "\n" +
+				"Medicamento asociado:" + "\n" +
+				"-ID: " + medicamento.getId() + "\n" +
+				"-Nombre: " + medicamento.getNombre() + "\n" +
+				"-Principio activo: " + medicamento.getPrincipioActivo() + "\n" +
+				"-Dosis máxima (en mg) " + medicamento.getDosisMax();
 	}
 }

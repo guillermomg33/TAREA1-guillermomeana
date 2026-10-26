@@ -7,7 +7,9 @@
 
 package entidades;
 
-public class Medicamento {
+import java.io.Serializable;
+
+public class Medicamento implements Serializable {
 	private Long id;
 	private String nombre;
 	private String principioActivo;

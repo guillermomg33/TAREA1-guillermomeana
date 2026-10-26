@@ -8,18 +8,18 @@
 package entidades;
 
 public class Secretariado extends Empleado {
-	private String aniosExperiencia;
+	private int aniosExperiencia;
 
-	public Secretariado(String experiencia) {
-		super();
-		this.aniosExperiencia = experiencia;
+	public Secretariado(Long id, String nombre, String apellidos, String telefono, String email, String nifNie, String direccion, int aniosExperiencia) {
+		super(id, nombre, apellidos, telefono, email, nifNie, direccion);
+		this.aniosExperiencia = aniosExperiencia;
 	}
 
-	public String getAniosExperiencia() {
+	public int getAniosExperiencia() {
 		return aniosExperiencia;
 	}
 
-	public void setAniosExperiencia(String aniosExperiencia) {
+	public void setAniosExperiencia(int aniosExperiencia) {
 		this.aniosExperiencia = aniosExperiencia;
 	}
 }
